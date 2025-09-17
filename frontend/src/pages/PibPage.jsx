@@ -3,7 +3,7 @@ import PibChart from "../components/PibChart";
 function PibPage() {
   const [dados, setDados] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:8080/api/pib")
+    fetch("http://192.168.15.117:8080/api/pib")
       .then((res) => res.json())
       .then((data) => setDados(data))
       .catch((err) => console.error("Erro ao buscar dados do PIB:", err));

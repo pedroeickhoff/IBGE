@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import PibChart from "./components/PibChart";
 import PibPage from "./pages/PibPage";
+import TabelaPage from "./pages/TabelaPage";
 
 function App() {
   return (
@@ -23,10 +23,19 @@ function App() {
                       Ver Gráfico do PIB
                     </button>
                   </Link>
+                  <Link to="/tabela">
+                    <button
+                      className="access-button"
+                      style={{ marginLeft: "1rem" }}
+                    >
+                      Ver Tabela do PIB
+                    </button>
+                  </Link>
                 </div>
               }
             />
             <Route path="/pib" element={<PibPage />} />
+            <Route path="/tabela" element={<TabelaPage />} />
           </Routes>
         </main>
 

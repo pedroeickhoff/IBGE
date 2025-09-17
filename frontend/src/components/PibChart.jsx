@@ -17,6 +17,14 @@ function PibChart({ dados }) {
     pibPerCapita: parseFloat(item.pibPerCapita.replace(",", ".")) / 5.3,
   }));
 
+  // Função para formatar valores como moeda
+  const formatarMoeda = (valor) =>
+    new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+      maximumFractionDigits: 2,
+    }).format(valor);
+
   return (
     <div
       style={{
@@ -38,13 +46,13 @@ function PibChart({ dados }) {
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" stroke="#30363d" />
           <XAxis dataKey="ano" stroke="#c9d1d9" />
-          <YAxis stroke="#c9d1d9" />
-          <Tooltip />
+          <YAxis stroke="#c9d1d9" tickFormatter={formatarMoeda} />
+          <Tooltip formatter={(value) => formatarMoeda(value)} />
           <Legend />
           <Line
             type="monotone"
             dataKey="pibTotal"
-            name="PIB Total em trilhões (US$)"
+            name="PIB Total (US$)"
             stroke="#2ea043"
             strokeWidth={2}
             dot={false}
