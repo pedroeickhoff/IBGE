@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import PibChart from "./components/PibChart";
+import PibPage from "./pages/PibPage";
 
 function App() {
   return (
@@ -9,7 +10,6 @@ function App() {
       <div className="dashboard">
         <header className="header">
           <h1>📈 IBGE Market Dashboard</h1>
-          <p>Visualize a evolução do PIB como se fosse um índice da bolsa</p>
         </header>
 
         <main className="main">
@@ -18,7 +18,7 @@ function App() {
               path="/"
               element={
                 <div style={{ textAlign: "center" }}>
-                  <Link to="/api/pib">
+                  <Link to="/pib">
                     <button className="access-button">
                       Ver Gráfico do PIB
                     </button>
@@ -26,7 +26,7 @@ function App() {
                 </div>
               }
             />
-            <Route path="/api/pib" element={<PibChart />} />
+            <Route path="/pib" element={<PibPage />} />
           </Routes>
         </main>
 
