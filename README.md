@@ -40,3 +40,20 @@
 
 6. Agora, em outro dispositivo conectado à mesma rede, acesse:
    http://SEUIP:3000
+
+---
+
+## Decisões de Design e Tecnologias Utilizadas
+
+1. **Backend em Java com Spring Boot**
+   - Escolhido por fornecer uma estrutura robusta e produtiva para criação de APIs REST.
+   - O uso de **Spring Web** simplifica a criação de controllers e a exposição dos dados em JSON.
+   - O padrão **Camadas (Controller → Service → DTO)** foi adotado para separar responsabilidades, tornando o código mais organizado e fácil de manter.
+
+2. **Frontend em React**
+   - Escolhido por sua flexibilidade na construção de interfaces modernas e responsivas.
+   - O uso de **React Router** permite navegação entre páginas (gráfico e tabela) sem recarregar a aplicação.
+   - O gráfico foi implementado com a biblioteca **Recharts**, que é simples, declarativa e bem integrada ao React.
+  
+3. **Design**
+   - Utilizei um design "dark" que lembra a bolsa de valores pois trabalhei com gráficos sobre variação do PIB em Dólar ao longo dos anos, fazendo essa refência ao mercado financeiro
