@@ -33,8 +33,10 @@
    Dentro desses arquivos já existe uma explicação sobre onde realizar a alteração.
 
 4. Após salvar as alterações, é necessário parar e subir novamente os containers para que a aplicação seja acessível em outros dispositivos. Para isso, execute:
+   
    docker compose down
+   
    docker compose up --build
 
-5. Agora, em outro dispositivo conectado à mesma rede, acesse:
+6. Agora, em outro dispositivo conectado à mesma rede, acesse:
    http://SEUIP:3000
