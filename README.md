@@ -56,4 +56,4 @@
    - O gráfico foi implementado com a biblioteca **Recharts**, que é simples, declarativa e bem integrada ao React.
   
 3. **Design**
-   - Utilizei um design "dark" que lembra a bolsa de valores pois trabalhei com gráficos sobre variação do PIB em Dólar ao longo dos anos, fazendo essa refência ao mercado financeiro
+   - Utilizei um design "dark" que lembra a bolsa de valores pois trabalhei com gráficos sobre variação do PIB em Dólar ao longo dos anos, fazendo essa refência ao mercado financeiro.
