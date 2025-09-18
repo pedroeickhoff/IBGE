@@ -1,48 +1,39 @@
-# 📊 IBGE - Consumo de API  
+# IBGE - Consumo de API
 
-Este projeto consiste em um **backend em Spring Boot** e um **frontend em React** para consumir e exibir dados da API do IBGE.  
+## Pré-requisitos
+- É necessário ter o **Docker** instalado no computador.
 
----
+## Passo a passo para execução
 
-## 🚀 Passo a passo para executar a aplicação  
+1. Clone este repositório na pasta desejada:
+   git clone "https://github.com/pedroeickhoff/IBGE"
 
-### 1. Clone o repositório  
-Escolha uma pasta de preferência e rode o comando:  
-git clone https://github.com/pedroeickhoff/IBGE/tree/main  
+2. Entre na pasta criada e execute o comando:
+   docker compose up --build
 
----
+   Na primeira execução, a criação do container pode demorar um pouco.
+   Note que o teste unitário já é realizado automaticamente durante o build do container.
 
-### 2. Inicie o **backend**  
-Abra um terminal na pasta criada e navegue até a pasta **backend**:  
-cd backend  
+4. Após a conclusão, a aplicação estará disponível em:
+   http://localhost:3000
 
-#### 🔹 (Opcional) Rodar teste unitário de consumo da API  
-./mvnw -Dtest=PibServiceTest test  
+## Acesso em outros dispositivos (desktop ou móvel)
 
-#### 🔹 Rodar a aplicação backend  
-./mvnw spring-boot:run  
+1. Abra o Prompt de Comando no computador que está rodando o container e execute:
+   ipconfig
 
----
+2. Localize a seção Adaptador de Rede sem Fio Wi-Fi e copie o valor do campo:
+   Endereço IPv4. . . . . . . . . . . . . : SEUIP
 
-### 3. Inicie o **frontend**  
-Abra outro terminal na pasta criada e navegue até a pasta **frontend**:  
-cd frontend  
+3. Substitua "localhost" por este IP nos seguintes arquivos:
+   - frontend/src/pages/PibPage.jsx
+   - frontend/src/pages/TabelaPage.jsx
 
-Inicie o programa:  
-npm start  
+   Dentro desses arquivos já existe uma explicação sobre onde realizar a alteração.
 
-A aplicação será iniciada em:  
-👉 http://localhost:3000  
+4. Após salvar as alterações, é necessário parar e subir novamente os containers para que a aplicação seja acessível em outros dispositivos. Para isso, execute:
+   docker compose down
+   docker compose up --build
 
----
-
-### 4. 🌐 Acessando via dispositivo móvel (opcional)  
-Caso queira acessar em outro dispositivo conectado à mesma rede:  
-
-1. Abra um novo terminal e rode:  
-   ipconfig  
-2. Procure por:  
-   Adaptador de Rede sem Fio Wi-Fi  
-   Endereço IPv4. . . . . . . . . . . . . . . . : SEU ENDEREÇO  
-3. No dispositivo móvel, acesse:  
-   SEUENDEREÇOIPV4:3000  
+5. Agora, em outro dispositivo conectado à mesma rede, acesse:
+   http://SEUIP:3000
