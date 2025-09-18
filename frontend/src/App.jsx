@@ -17,19 +17,14 @@ function App() {
             <Route
               path="/"
               element={
-                <div style={{ textAlign: "center" }}>
+                <div className="button-container">
                   <Link to="/pib">
                     <button className="access-button">
                       Ver Gráfico do PIB
                     </button>
                   </Link>
                   <Link to="/tabela">
-                    <button
-                      className="access-button"
-                      style={{ marginLeft: "1rem" }}
-                    >
-                      Ver Tabela do PIB
-                    </button>
+                    <button className="access-button">Ver Tabela do PIB</button>
                   </Link>
                 </div>
               }
