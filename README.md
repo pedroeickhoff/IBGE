@@ -7,8 +7,9 @@
 
 1. Clone este repositório na pasta desejada:
    git clone "https://github.com/pedroeickhoff/IBGE"
+   ou baixe o arquivo .zip direto do github
 
-2. Entre na pasta criada e execute o comando:
+3. Entre na pasta criada e execute o comando:
    docker compose up --build
 
    Na primeira execução, a criação do container pode demorar um pouco.
